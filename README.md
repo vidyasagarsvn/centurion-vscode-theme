@@ -1,38 +1,50 @@
 # Centurion VS Code Theme
 
-This repository contains the Centurion color theme for Visual Studio Code.
+Centurion is a Visual Studio Code color theme contributed via this extension.
 
-Files added by the extension scaffold:
+Included files
 
 - `package.json` — VS Code extension manifest (name, publisher, contributes, scripts)
 - `themes/centurion-color-theme.json` — the theme JSON used by the extension
 
 Quick start
-1. Replace or edit `themes/centurion-color-theme.json` if you want to tweak colors.
-2. Install `vsce` (packager) if you want to create a .vsix:
 
-```bash
+1. Edit `themes/centurion-color-theme.json` to adjust colors.
+2. Install `vsce` locally or use `npx` to package the extension:
+
+```powershell
+# install globally (optional)
 npm install -g vsce
-```
 
-3. Package the extension:
-
-```bash
-cd /Users/vidyasagar/Documents/code/centurion-vscode-theme
+# or use npx (no global install required)
 npx vsce package
 ```
 
-4. Install the generated VSIX in VS Code:
+3. Install the generated `.vsix` in VS Code:
 
-```bash
-code --install-extension centurion-vscode-theme-0.1.0.vsix
+```powershell
+code --install-extension ./centurion-vscode-theme-<version>.vsix
 ```
 
 Publishing
 
-Set `publisher` in `package.json` to your marketplace publisher id, then use `vsce publish` to publish.
+Set the `publisher` field in `package.json` to your Marketplace publisher ID and run:
+
+```powershell
+npx vsce publish
+```
 
 Notes
 
-- The `themes/centurion-color-theme.json` file was copied from the root `centurion-color-theme.json`.
-- If you want me to commit and push these new files to the `development` branch, say "commit and push".
+- The theme file lives at `themes/centurion-color-theme.json`.
+- This repository contains tooling and sample artifacts used during development; those files are not required in the published `.vsix` and are excluded by the `.vscodeignore` file.
+- If you'd like a release branch with only the minimal theme files, I can create it and push on your behalf.
+
+Contributing
+
+- Open a pull request with any color or metadata updates.
+- Run the coverage checker (`scripts/check_theme_coverage.py`) to verify TextMate scope fallbacks before packaging.
+
+License
+
+This project is provided under the terms of the included `LICENSE` file.
