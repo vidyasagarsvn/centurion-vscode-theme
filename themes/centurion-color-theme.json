@@ -1437,6 +1437,16 @@
     }
     ,
     {
+      "name": "TypeScript Enum Member",
+      "scope": [
+        "variable.other.enummember.ts",
+        "variable.other.enummember.tsx"
+      ],
+      "settings": {
+        "foreground": "#ffca90"
+      }
+    },
+    {
       "name": "TypeScript Interface (fallback)",
       "scope": [
         "entity.name.type.interface",
@@ -1445,6 +1455,82 @@
       ],
       "settings": {
         "foreground": "#b1fd00"
+      }
+    },
+    {
+      "name": "Object Properties - JavaScript/TypeScript",
+      "scope": [
+        "variable.other.property.js",
+        "variable.other.property.js.jsx",
+        "variable.other.property.ts",
+        "variable.other.property.tsx",
+        "variable.other.property.cpp",
+        "variable.other.property.cuda-cpp",
+        "variable.other.property.coffee",
+        "variable.other.property.php"
+      ],
+      "settings": {
+        "foreground": "#dedede"
+      }
+    },
+    {
+      "name": "Object Constants - JavaScript/TypeScript",
+      "scope": [
+        "variable.other.constant.object.js",
+        "variable.other.constant.object.property.js",
+        "variable.other.constant.property.js",
+        "variable.other.constant.object.js.jsx",
+        "variable.other.constant.object.property.js.jsx",
+        "variable.other.constant.property.js.jsx",
+        "variable.other.constant.object.ts",
+        "variable.other.constant.object.property.ts",
+        "variable.other.constant.property.ts",
+        "variable.other.constant.object.tsx",
+        "variable.other.constant.object.property.tsx",
+        "variable.other.constant.property.tsx"
+      ],
+      "settings": {
+        "foreground": "#ee4686"
+      }
+    },
+    {
+      "name": "Readwrite Variables - JavaScript/TypeScript/C#",
+      "scope": [
+        "variable.other.readwrite.js",
+        "variable.other.readwrite.alias.js",
+        "variable.other.readwrite.js.jsx",
+        "variable.other.readwrite.alias.js.jsx",
+        "variable.other.readwrite.ts",
+        "variable.other.readwrite.alias.ts",
+        "variable.other.readwrite.tsx",
+        "variable.other.readwrite.alias.tsx",
+        "variable.other.readwrite.cs",
+        "variable.other.readwrite.batchfile"
+      ],
+      "settings": {
+        "foreground": "#EEFFFF"
+      }
+    },
+    {
+      "name": "Class Members - C/C++/Objective-C/PowerShell",
+      "scope": [
+        "variable.other.member.c",
+        "variable.other.member.objc",
+        "variable.other.member.objcpp",
+        "variable.other.member.powershell"
+      ],
+      "settings": {
+        "foreground": "#dedede"
+      }
+    },
+    {
+      "name": "Enum Members - C++/CUDA",
+      "scope": [
+        "variable.other.enummember.cpp",
+        "variable.other.enummember.cuda-cpp"
+      ],
+      "settings": {
+        "foreground": "#ffca90"
       }
     }
   ],
