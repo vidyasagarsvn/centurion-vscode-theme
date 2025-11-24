@@ -783,7 +783,7 @@
       ],
       "settings": {
         "fontStyle": "italic",
-        "foreground": "#1a9a68"
+        "foreground": "#1aa969"
       }
     },
     {
@@ -987,7 +987,7 @@
         "keyword.control.exception.python"
       ],
       "settings": {
-        "foreground": "#af59ff"
+        "foreground": "#b15dff"
       }
     },
     {
@@ -1134,7 +1134,7 @@
         "meta.method"
       ],
       "settings": {
-        "foreground": "#f04267"
+        "foreground": "#f0486c"
       }
     },
     {
@@ -1184,7 +1184,7 @@
       ],
       "settings": {
         "fontStyle": "italic",
-        "foreground": "#199666"
+        "foreground": "#1aa969"
       }
     },
     {
@@ -1448,6 +1448,24 @@
       }
     }
   ],
+  "semanticTokenColors": {
+    "namespace": { "foreground": "#f4d395" },
+    "type": { "foreground": "#b1fd00" },
+    "class": { "foreground": "#ff8b3d" },
+    "enum": { "foreground": "#b1fd00" },
+    "interface": { "foreground": "#b1fd00" },
+    "function": { "foreground": "#f04267" },
+    "method": { "foreground": "#f04267" },
+    "property": { "foreground": "#dedede" },
+    "variable": { "foreground": "#EEFFFF" },
+    "parameter": { "foreground": "#a8a2f8" },
+    "comment": { "foreground": "#bd8e48", "fontStyle": "italic" },
+    "string": { "foreground": "#ffb454" },
+    "number": { "foreground": "#ffae00" },
+    "keyword": { "foreground": "#C792EA" },
+    "operator": { "foreground": "#e8ffb2" },
+    "decorator": { "foreground": "#f0c505" }
+  },
   "colors": {
     "foreground": "#cccccc",
     "focusBorder": "#007fd4",

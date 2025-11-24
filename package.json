@@ -1,6 +1,7 @@
 {
   "name": "centurion-vscode-theme",
   "displayName": "Centurion",
+  "icon": "images/icon.png",
   "publisher": "vidyasagarsvn",
   "version": "0.1.0",
   "repository": {
@@ -12,6 +13,10 @@
   },
   "categories": [
     "Themes"
+  ],
+  "galleryImages": [
+    "images/screenshot-1.png",
+    "images/screenshot-2.png"
   ],
   "contributes": {
     "themes": [
