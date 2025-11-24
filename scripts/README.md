@@ -35,6 +35,17 @@ This directory contains showcase scripts in various programming languages to dem
 
 **Best for**: Ruby on Rails and backend development
 
+### `showcase.go`
+**Go** - Concurrent and efficient systems programming
+- Packages and imports with best practices
+- Structs and methods
+- Interfaces and type definitions
+- Goroutines and channels (demonstrated patterns)
+- Error handling with sentinel values
+- Standard library usage
+
+**Best for**: Systems programming, microservices, and backend APIs
+
 ### `showcase.ts`
 **TypeScript** - Object-oriented TypeScript patterns
 - Interfaces and type definitions
