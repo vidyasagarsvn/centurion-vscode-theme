@@ -1,9 +1,13 @@
 {
   "name": "centurion-vscode-theme",
-  "displayName": "Centurion",
+  "displayName": "Centurion Theme",
+  "description": "A comprehensive dark theme with WCAG AA compliant colors and 316+ mapped token scopes across 12+ languages.",
   "icon": "images/icon.png",
   "publisher": "vidyasagarsvn",
   "version": "0.1.0",
+  "license": "MIT",
+  "homepage": "https://github.com/vidyasagarsvn/centurion-vscode-theme#readme",
+  "bugs": "https://github.com/vidyasagarsvn/centurion-vscode-theme/issues",
   "repository": {
     "type": "git",
     "url": "https://github.com/vidyasagarsvn/centurion-vscode-theme"
@@ -13,6 +17,19 @@
   },
   "categories": [
     "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "dark",
+    "color-theme",
+    "centurion",
+    "wcag",
+    "accessible",
+    "typescript",
+    "python",
+    "java",
+    "rust",
+    "go"
   ],
   "galleryImages": [
     "images/screenshot-1.png",

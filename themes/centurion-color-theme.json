@@ -21,6 +21,161 @@
       }
     },
     {
+      "name": "Rust Keywords",
+      "scope": [
+        "keyword.rust",
+        "keyword.control.rust"
+      ],
+      "settings": {
+        "foreground": "#C792EA"
+      }
+    },
+    {
+      "name": "Rust Function Keyword",
+      "scope": [
+        "keyword.declaration.function.rust"
+      ],
+      "settings": {
+        "foreground": "#7dc2fc"
+      }
+    },
+    {
+      "name": "Rust Type Keywords",
+      "scope": [
+        "keyword.type.rust",
+        "storage.type.primitive.rust"
+      ],
+      "settings": {
+        "foreground": "#b1fd00"
+      }
+    },
+    {
+      "name": "Rust Visibility",
+      "scope": [
+        "keyword.visibility.rust",
+        "storage.modifier.visibility.rust"
+      ],
+      "settings": {
+        "foreground": "#F0486C"
+      }
+    },
+    {
+      "name": "Rust Mutability",
+      "scope": [
+        "keyword.mutability.rust",
+        "storage.modifier.mut.rust"
+      ],
+      "settings": {
+        "foreground": "#ff8b3d"
+      }
+    },
+    {
+      "name": "Rust Macros",
+      "scope": [
+        "meta.macro.rust",
+        "support.macro.rust",
+        "entity.name.macro.rust"
+      ],
+      "settings": {
+        "foreground": "#ffae00"
+      }
+    },
+    {
+      "name": "Rust Macro Invocation",
+      "scope": [
+        "meta.macro.invocation.rust"
+      ],
+      "settings": {
+        "foreground": "#ffb454"
+      }
+    },
+    {
+      "name": "Rust Attributes",
+      "scope": [
+        "meta.attribute.rust",
+        "meta.derive.rust",
+        "punctuation.definition.attribute.rust"
+      ],
+      "settings": {
+        "foreground": "#acda8a"
+      }
+    },
+    {
+      "name": "Rust Trait",
+      "scope": [
+        "keyword.trait.rust",
+        "entity.name.trait.rust"
+      ],
+      "settings": {
+        "foreground": "#67cdda"
+      }
+    },
+    {
+      "name": "Rust Trait Bounds",
+      "scope": [
+        "keyword.trait.bounds.rust",
+        "meta.trait.bound.rust"
+      ],
+      "settings": {
+        "foreground": "#daaef7"
+      }
+    },
+    {
+      "name": "Rust Module Path",
+      "scope": [
+        "meta.path.rust",
+        "meta.module.path.rust"
+      ],
+      "settings": {
+        "foreground": "#f4d395"
+      }
+    },
+    {
+      "name": "Rust Result/Option Enum",
+      "scope": [
+        "variable.enummember.ok.rust",
+        "variable.enummember.err.rust",
+        "variable.enummember.some.rust",
+        "variable.enummember.none.rust",
+        "support.enum.result.rust",
+        "support.enum.option.rust"
+      ],
+      "settings": {
+        "foreground": "#ee4686"
+      }
+    },
+    {
+      "name": "Rust Pattern Match",
+      "scope": [
+        "keyword.match.rust",
+        "meta.match.arm.rust"
+      ],
+      "settings": {
+        "foreground": "#C792EA"
+      }
+    },
+    {
+      "name": "Rust Unsafe",
+      "scope": [
+        "keyword.unsafe.rust",
+        "storage.modifier.unsafe.rust"
+      ],
+      "settings": {
+        "foreground": "#FF5370"
+      }
+    },
+    {
+      "name": "Rust Async/Await",
+      "scope": [
+        "keyword.async.rust",
+        "keyword.await.rust",
+        "storage.modifier.async.rust"
+      ],
+      "settings": {
+        "foreground": "#8ccdfc"
+      }
+    },
+    {
       "name": "Comment Markup Link",
       "scope": [
         "comment markup.link"
@@ -63,7 +218,129 @@
         "meta.function.cpp"
       ],
       "settings": {
-        "foreground": "#f6f6f6"
+        "foreground": "#7dc2fc"
+      }
+    },
+    {
+      "name": "C++ Member Function Names",
+      "scope": [
+        "entity.name.function.member.cpp",
+        "entity.name.function.member.c"
+      ],
+      "settings": {
+        "foreground": "#f1d36d"
+      }
+    },    
+    {
+      "name": "C++ Function Call Names",
+      "scope": [
+        "entity.name.function.call.cpp",
+        "entity.name.function.call.c"
+      ],
+      "settings": {
+        "foreground": "#7dc2fc"
+      }
+    },
+    {
+      "name": "C++ Function Definition Body",
+      "scope": [
+        "meta.body.function.definition.cpp"
+      ],
+      "settings": {
+        "foreground": "#90ffff"
+      }
+    },
+    {
+      "name": "C++ Function Body",
+      "scope": [
+        "meta.body.function.cpp",
+        "meta.body.function.c",
+        "meta.block.cpp"
+      ],
+      "settings": {
+        "foreground": "#EEFFFF"
+      }
+    },
+    {
+      "name": "C++ Type Casts",
+      "scope": [
+        "keyword.operator.cast.cpp",
+        "keyword.operator.cast.c"
+      ],
+      "settings": {
+        "foreground": "#C792EA"
+      }
+    },
+    {
+      "name": "C++ Scope Operator",
+      "scope": [
+        "punctuation.accessor.cpp",
+        "punctuation.accessor.c"
+      ],
+      "settings": {
+        "foreground": "#ff8b3d"
+      }
+    },
+    {
+      "name": "C++ Access Specifier",
+      "scope": [
+        "keyword.access.cpp",
+        "keyword.access.c"
+      ],
+      "settings": {
+        "foreground": "#ff96ad"
+      }
+    },
+    {
+      "name": "C++ Constructor Initializer",
+      "scope": [
+        "meta.function.constructor.cpp",
+        "meta.function.constructor.c"
+      ],
+      "settings": {
+        "foreground": "#acda8a"
+      }
+    },
+    {
+      "name": "C++ Member Variables",
+      "scope": [
+        "variable.other.member.cpp",
+        "variable.other.member.c"
+      ],
+      "settings": {
+        "foreground": "#b3e5fc"
+      }
+    },
+    {
+      "name": "C++ Pointer/Reference Declaration",
+      "scope": [
+        "punctuation.definition.pointer.cpp",
+        "punctuation.definition.pointer.c"
+      ],
+      "settings": {
+        "foreground": "#ffb454"
+      }
+    },
+    {
+      "name": "C++ Template Brackets",
+      "scope": [
+        "meta.template.argument.cpp",
+        "meta.template.argument.c",
+        "meta.template.declaration.cpp",
+        "meta.template.declaration.c"
+      ],
+      "settings": {
+        "foreground": "#ffae00"
+      }
+    },
+    {
+      "name": "C++ Preprocessor",
+      "scope": [
+        "meta.preprocessor.cpp",
+        "meta.preprocessor.c"
+      ],
+      "settings": {
+        "foreground": "#f4d395"
       }
     },
     {
@@ -1129,12 +1406,20 @@
       "name": "Function names & calls (fallback)",
       "scope": [
         "entity.name.function",
-        "meta.function",
-        "variable.function",
-        "meta.method"
+        "variable.function"
       ],
       "settings": {
         "foreground": "#f0486c"
+      }
+    },
+    {
+      "name": "Function names & calls 2",
+      "scope": [
+        "meta.function",
+        "meta.method"
+      ],
+      "settings": {
+        "foreground": "#ffe159"
       }
     },
     {
@@ -1376,7 +1661,7 @@
         "meta.mapping.key.flow.yaml"
       ],
       "settings": {
-        "foreground": "#ff8b3d"
+        "foreground": "#00D4FF"
       }
     },
     {
@@ -1399,7 +1684,7 @@
         "keyword.other.directive.yaml"
       ],
       "settings": {
-        "foreground": "#f07a1a"
+        "foreground": "#FF6B9D"
       }
     },
     {
@@ -1411,7 +1696,7 @@
         "punctuation.section.flow"
       ],
       "settings": {
-        "foreground": "#ffca90"
+        "foreground": "#FFD700"
       }
     },
     {
@@ -1421,7 +1706,88 @@
         "constant.numeric"
       ],
       "settings": {
-        "foreground": "#ffae00"
+        "foreground": "#C792EA"
+      }
+    },
+    {
+      "name": "YAML Booleans",
+      "scope": [
+        "constant.language.boolean.yaml",
+        "constant.language.true.yaml",
+        "constant.language.false.yaml"
+      ],
+      "settings": {
+        "foreground": "#52FF00"
+      }
+    },
+    {
+      "name": "YAML Null Values",
+      "scope": [
+        "constant.language.null.yaml",
+        "constant.language.empty.yaml"
+      ],
+      "settings": {
+        "foreground": "#FF5370"
+      }
+    },
+    {
+      "name": "YAML Comments",
+      "scope": [
+        "comment.line.yaml",
+        "comment.line.number-sign.yaml"
+      ],
+      "settings": {
+        "foreground": "#1aa969"
+      }
+    },
+    {
+      "name": "YAML Dashes (List)",
+      "scope": [
+        "punctuation.definition.block.sequence.yaml"
+      ],
+      "settings": {
+        "foreground": "#8ccdfc"
+      }
+    },
+    {
+      "name": "YAML Colons (Separator)",
+      "scope": [
+        "punctuation.separator.key-value.yaml"
+      ],
+      "settings": {
+        "foreground": "#FF8C42"
+      }
+    },
+    {
+      "name": "YAML Tags",
+      "scope": [
+        "meta.tag.yaml",
+        "keyword.other.tag.yaml"
+      ],
+      "settings": {
+        "foreground": "#daaef7"
+      }
+    },
+    {
+      "name": "YAML Block Scalars",
+      "scope": [
+        "punctuation.definition.scalar.yaml",
+        "keyword.operator.block.scalar.yaml"
+      ],
+      "settings": {
+        "foreground": "#ffb454"
+      }
+    },
+    {
+      "name": "YAML Flow Collections",
+      "scope": [
+        "meta.flow.sequence.yaml",
+        "meta.flow.mapping.yaml",
+        "punctuation.definition.flow.sequence.yaml",
+        "punctuation.definition.flow.mapping.yaml"
+      ],
+      "settings": {
+        "foreground": "#1AA969"
       }
     },
     {
