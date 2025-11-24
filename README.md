@@ -26,7 +26,7 @@ code --install-extension centurion-vscode-theme-<version>.vsix
 
 ## ✨ Features
 
-- **Comprehensive Token Coverage**: 316+ mapped token scopes across 12+ programming languages.
+- **Comprehensive Token Coverage**: 400+ mapped token scopes across 20+ programming languages.
 
 - **WCAG AA Compliant**: All colors meet the 4.5:1 contrast ratio minimum for accessibility on dark backgrounds.
 
