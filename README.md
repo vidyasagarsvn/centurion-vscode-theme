@@ -16,12 +16,12 @@ A comprehensive dark theme for Visual Studio Code supporting 12+ programming lan
 code --install-extension centurion-vscode-theme-<version>.vsix
 ```
 
-### Screenshots
+## 🎨 Screenshots
 
-![Theme Preview 1](images/screenshot-1.png)  
+![Theme Preview 1](https://raw.githubusercontent.com/vidyasagarsvn/centurion-vscode-theme/development/images/screenshot-1.png)  
 *Centurion theme in action with Python code*
 
-![Theme Preview 2](images/screenshot-2.png)  
+![Theme Preview 2](https://raw.githubusercontent.com/vidyasagarsvn/centurion-vscode-theme/development/images/screenshot-2.png)  
 *TypeScript syntax highlighting*
 
 ## ✨ Features
