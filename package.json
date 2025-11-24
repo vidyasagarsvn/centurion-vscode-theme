@@ -1,0 +1,26 @@
+{
+  "name": "centurion-vscode-theme",
+  "displayName": "Centurion",
+  "publisher": "vidyasagarsvn",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Centurion",
+        "uiTheme": "vs-dark",
+        "path": "./themes/centurion-color-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {}
+}
