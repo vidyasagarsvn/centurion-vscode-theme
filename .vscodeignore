@@ -48,5 +48,8 @@ examples/
 # Ensure themes folder is included
 !themes/**
 
+# Explicitly include images folder for marketplace
+!images/**
+
 # Always include package.json (required by vsce)
 !package.json

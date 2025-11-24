@@ -18,10 +18,12 @@ code --install-extension centurion-vscode-theme-<version>.vsix
 
 ## 🎨 Screenshots
 
-![Theme Preview 1](./images/screenshot-1.png)  
+<img src="./images/screenshot-1.png" alt="Centurion theme in action with Python code" width="800">
+
 *Centurion theme in action with Python code*
 
-![Theme Preview 2](./images/screenshot-2.png)  
+<img src="./images/screenshot-2.png" alt="TypeScript syntax highlighting" width="800">
+
 *TypeScript syntax highlighting*
 
 ## ✨ Features
