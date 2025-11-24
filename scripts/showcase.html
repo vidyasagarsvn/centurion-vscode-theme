@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centurion Theme Showcase</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a2225;
+            color: #EEFFFF;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #D946EF;
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1f3036 0%, #2a3a3d 100%);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #D946EF;
+            margin-bottom: 2rem;
+        }
+
+        .header p {
+            color: #8ccdfc;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background-color: #1f3036;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-left: 4px solid #42B8FF;
+            transition: transform 0.2s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            background-color: #2a3a3d;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #8cff42;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #8ccdfc;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .features {
+            background-color: #1f3036;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .features h2 {
+            color: #C084FC;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .feature-icon {
+            color: #42B8FF;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .feature-text {
+            flex: 1;
+        }
+
+        .feature-text strong {
+            color: #D946EF;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .feature-text p {
+            color: #8ccdfc;
+            font-size: 0.9rem;
+        }
+
+        .cta {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        button {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background-color: #D946EF;
+            color: #1a2225;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff6bd6;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(217, 70, 239, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: #2a3a3d;
+            color: #42B8FF;
+            border: 2px solid #42B8FF;
+        }
+
+        .btn-secondary:hover {
+            background-color: #3a4a4d;
+            box-shadow: 0 4px 12px rgba(66, 184, 255, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #2a3a3d;
+            color: #8ccdfc;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .color-sample {
+            aspect-ratio: 1;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎨 Centurion Theme</h1>
+            <p>
+                A comprehensive dark theme with WCAG AA compliant colors and rich syntax
+                highlighting across 12+ programming languages.
+            </p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value">147</div>
+                <div class="stat-label">Token Scopes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">74</div>
+                <div class="stat-label">Unique Colors</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">WCAG AA</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">12+</div>
+                <div class="stat-label">Languages</div>
+            </div>
+        </div>
+
+        <div class="features">
+            <h2>✨ Features</h2>
+            <ul class="feature-list">
+                <li class="feature-item">
+                    <span class="feature-icon">🎯</span>
+                    <div class="feature-text">
+                        <strong>Precise Syntax Highlighting</strong>
+                        <p>Fine-grained token differentiation for every language</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-icon">♿</span>
+                    <div class="feature-text">
+                        <strong>Accessibility First</strong>
+                        <p>100% WCAG AA compliant with high contrast ratios</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-icon">🎨</span>
+                    <div class="feature-text">
+                        <strong>Tetradic Color Harmony</strong>
+                        <p>Scientifically balanced color scheme for visual harmony</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-icon">⚡</span>
+                    <div class="feature-text">
+                        <strong>Optimized Performance</strong>
+                        <p>Minimal file size with consolidated token rules</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-icon">🚀</span>
+                    <div class="feature-text">
+                        <strong>Modern Development</strong>
+                        <p>Support for latest language features and frameworks</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-icon">📦</span>
+                    <div class="feature-text">
+                        <strong>Well Organized</strong>
+                        <p>Language-grouped rules for easy maintenance</p>
+                    </div>
+                </li>
+            </ul>
+
+            <h3 style="color: #C084FC; margin-top: 2rem; margin-bottom: 1rem;">Color Palette</h3>
+            <div class="color-palette">
+                <div class="color-sample" style="background-color: #D946EF;">#D946EF</div>
+                <div class="color-sample" style="background-color: #C084FC;">#C084FC</div>
+                <div class="color-sample" style="background-color: #42B8FF;">#42B8FF</div>
+                <div class="color-sample" style="background-color: #8cff42;">#8cff42</div>
+                <div class="color-sample" style="background-color: #ffae00;">#ffae00</div>
+                <div class="color-sample" style="background-color: #FF5370;">#FF5370</div>
+            </div>
+        </div>
+
+        <div class="cta">
+            <button class="btn-primary">Install Theme</button>
+            <button class="btn-secondary">View on GitHub</button>
+        </div>
+
+        <footer>
+            <p>🎯 Centurion Theme - Built for developers who care about code aesthetics</p>
+            <p style="font-size: 0.85rem; color: #67cdda;">MIT License • Open Source</p>
+        </footer>
+    </div>
+</body>
+</html>
