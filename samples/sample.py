@@ -1,181 +1,459 @@
+#!/usr/bin/env python3
 """
-Python sample demonstrating all token types and syntax.
+Comprehensive Python sample showcasing all language features and token types.
+Demonstrates proper syntax highlighting across the Centurion color theme.
 """
 
-# Comments: Single line comment
-"""Multi-line string (docstring)"""
-
-# Keywords
+# Standard library imports
 import os
-from typing import List, Dict, Optional, Union, Tuple
+import sys
+from typing import List, Dict, Optional, Union, Tuple, Any, Callable
 from abc import ABC, abstractmethod
-import sys as system
+from dataclasses import dataclass
+from enum import Enum
+from datetime import datetime
+from pathlib import Path
 
-# Built-in functions and constants
-print("String literal")
-x = None
-y = True
-z = False
 
-# Numbers
-integer = 42
-floating = 3.14
-scientific = 1e-3
-hexadecimal = 0xFF
-binary = 0b1010
-octal = 0o755
+# ============================================================================
+# CONSTANTS AND GLOBAL VARIABLES
+# ============================================================================
 
-# String literals
-single_quote = "single"
-double_quote = "double"
-triple_single = """multi
-line"""
-triple_double = """another
-multi"""
-raw_string = r"C:\path\to\file"
-f_string = f"formatted {x} string {integer + floating}"
+DEBUG_MODE: bool = True
+MAX_RETRIES: int = 3
+API_TIMEOUT: float = 30.5
+EMPTY_VALUE: None = None
+VALID_STATUSES: List[str] = ["pending", "active", "completed"]
 
-# Control flow
-if x is None:
-    pass
-elif y or z:
-    pass
-else:
-    pass
 
-for i in range(10):
-    if i > 5:
-        break
-    continue
+# ============================================================================
+# ENUMS AND DATA CLASSES
+# ============================================================================
 
-while True:
+
+class Status(Enum):
+    """Enumeration of possible statuses."""
+
+    PENDING = "pending"
+    ACTIVE = "active"
+    COMPLETED = "completed"
+
+
+@dataclass
+class User:
+    """A user with name and email."""
+
+    name: str
+    email: str
+    age: int = 18
+    is_active: bool = True
+
+    def __str__(self) -> str:
+        return f"{self.name} <{self.email}>"
+
+
+# ============================================================================
+# FUNCTIONS AND DECORATORS
+# ============================================================================
+
+
+def simple_function(x: int, y: int) -> int:
+    """
+    Simple function that adds two numbers.
+
+    Args:
+        x: First number
+        y: Second number
+
+    Returns:
+        The sum of x and y
+    """
+    return x + y
+
+
+def function_with_defaults(
+    name: str, age: int = 25, email: Optional[str] = None, *args: Any, **kwargs: Any
+) -> Dict[str, Any]:
+    """Function with default and variable arguments."""
+    return {
+        "name": name,
+        "age": age,
+        "email": email or "unknown@example.com",
+        "extra_args": args,
+        "extra_kwargs": kwargs,
+    }
+
+
+def decorator_function(func: Callable) -> Callable:
+    """A simple decorator."""
+
+    def wrapper(*args: Any, **kwargs: Any) -> Any:
+        print(f"Calling {func.__name__}")
+        return func(*args, **kwargs)
+
+    return wrapper
+
+
+@decorator_function
+def decorated_function() -> str:
+    """A function with a decorator."""
+    return "decorated result"
+
+
+# ============================================================================
+# LAMBDA AND COMPREHENSIONS
+# ============================================================================
+
+# Lambda expressions
+add = lambda x, y: x + y
+multiply = lambda x, y: x * y
+is_even = lambda n: n % 2 == 0
+
+# List comprehension
+squares = [x**2 for x in range(10)]
+evens = [x for x in range(20) if is_even(x)]
+nested = [[x + y for y in range(3)] for x in range(3)]
+
+# Dictionary comprehension
+squares_dict = {x: x**2 for x in range(5)}
+filtered_dict = {k: v for k, v in {"a": 1, "b": 2, "c": 3}.items() if v > 1}
+
+# Set comprehension
+unique_squares = {x**2 for x in range(10)}
+
+# Generator expression
+squared_generator = (x**2 for x in range(1000))
+
+
+# ============================================================================
+# COLLECTIONS AND SLICING
+# ============================================================================
+
+# Lists
+numbers: List[int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+mixed_list: List[Any] = [1, "string", 3.14, True, None]
+
+# Tuples
+coordinates: Tuple[int, int, int] = (10, 20, 30)
+immutable_data: Tuple[str, ...] = ("a", "b", "c", "d")
+
+# Dictionaries
+config: Dict[str, Any] = {
+    "host": "localhost",
+    "port": 8080,
+    "debug": True,
+    "features": ["auth", "logging", "cache"],
+}
+
+# Sets
+tags: set = {"python", "theme", "syntax", "highlight"}
+unique_ids = {101, 102, 103, 104}
+
+# Slicing operations
+first_three = numbers[:3]
+skip_first = numbers[1:]
+every_second = numbers[::2]
+reversed_list = numbers[::-1]
+subset = numbers[2:7:2]
+
+
+# ============================================================================
+# CONTROL FLOW
+# ============================================================================
+
+
+def control_flow_example(value: int) -> str:
+    """Demonstrate various control flow patterns."""
+
+    # if/elif/else
+    if value < 0:
+        return "negative"
+    elif value == 0:
+        return "zero"
+    elif value < 10:
+        return "single digit"
+    else:
+        return "large number"
+
+
+def loops_example() -> None:
+    """Demonstrate loop constructs."""
+
+    # for loop
+    for i in range(5):
+        if i == 2:
+            continue
+        if i == 4:
+            break
+        print(i)
+
+    # for with enumerate
+    items = ["a", "b", "c"]
+    for index, item in enumerate(items):
+        print(f"{index}: {item}")
+
+    # for with zip
+    names = ["Alice", "Bob", "Charlie"]
+    ages = [25, 30, 35]
+    for name, age in zip(names, ages):
+        print(f"{name} is {age}")
+
+    # while loop
+    counter = 0
+    while counter < 5:
+        counter += 1
+
+
+def exception_handling() -> None:
+    """Demonstrate exception handling."""
+
     try:
         result = 10 / 0
     except ZeroDivisionError as e:
-        print(e)
-    except Exception:
-        pass
+        print(f"Error: {e}")
+    except (ValueError, TypeError):
+        print("Type or value error occurred")
+    except Exception as e:
+        print(f"Unknown error: {e}")
     else:
-        pass
+        print("No exception occurred")
     finally:
-        pass
-    break
+        print("Cleanup resources")
 
 
-# Functions and decorators
-@property
-@staticmethod
-@classmethod
-def example_function(param: int, *args, **kwargs) -> Optional[str]:
-    """Function with type hints and docstring."""
-    return None
+# ============================================================================
+# CLASSES AND OOP
+# ============================================================================
 
 
-async def async_function():
-    await some_coroutine()
+class Animal(ABC):
+    """Abstract base class for animals."""
 
-
-# Lambda
-lambda_func = lambda x, y: x + y
-
-
-# Classes
-class BaseClass(ABC):
-    class_var = "class variable"
+    class_species = "Unknown"
 
     def __init__(self, name: str) -> None:
         self.name = name
-        self._private = None
-        self.__dunder__ = True
-
-    @abstractmethod
-    def abstract_method(self) -> None:
-        pass
-
-    def regular_method(self) -> None:
-        self.name = "modified"
+        self._age = 0
+        self.__id = id(self)
 
     @property
-    def property_method(self) -> str:
-        return self.name
+    def age(self) -> int:
+        """Get the age of the animal."""
+        return self._age
+
+    @age.setter
+    def age(self, value: int) -> None:
+        """Set the age of the animal."""
+        if value < 0:
+            raise ValueError("Age cannot be negative")
+        self._age = value
+
+    @abstractmethod
+    def make_sound(self) -> str:
+        """Make a sound specific to the animal."""
+        pass
+
+    @staticmethod
+    def get_species() -> str:
+        """Get the species name."""
+        return "Generic Animal"
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "Animal":
+        """Create an animal from a dictionary."""
+        return cls(data.get("name", "Unknown"))
 
 
-class DerivedClass(BaseClass):
-    def abstract_method(self) -> None:
-        super().abstract_method()
+class Dog(Animal):
+    """Dog subclass."""
+
+    class_species = "Canis familiaris"
+
+    def __init__(self, name: str, breed: str = "Mixed") -> None:
+        super().__init__(name)
+        self.breed = breed
+
+    def make_sound(self) -> str:
+        """Dogs bark."""
+        return "Woof!"
+
+    def fetch(self, item: str) -> str:
+        return f"{self.name} fetched the {item}"
 
 
-# Operators
-result = 1 + 2 - 3 * 4 / 5 % 6
-result = 2**3
-result = a & b | c ^ d << 1 >> 1
-result = a and b or not c
-result = a is b is c
-result = a is not b
-result = a in b
-result = a not in b
-result = a < b <= c > d >= e == f != g
-
-# Comprehensions
-list_comp = [x for x in range(10) if x % 2]
-dict_comp = {x: x**2 for x in range(5)}
-set_comp = {x for x in range(5)}
-gen_exp = (x for x in range(5))
-
-# Collections
-my_list = [1, 2, 3]
-my_tuple = (1, 2, 3)
-my_dict = {"key": "value", "num": 42}
-my_set = {1, 2, 3}
-
-# Slicing
-slice_op = my_list[1:3]
-slice_step = my_list[::2]
-slice_neg = my_list[-2:]
-
-# Context manager
-with open("file.txt") as f:
-    content = f.read()
-
-# Global and nonlocal
-global_var = 10
+# ============================================================================
+# OPERATORS
+# ============================================================================
 
 
-def outer():
-    nonlocal_var = 20
+def operators_example() -> None:
+    """Demonstrate different operator types."""
 
-    def inner():
-        nonlocal nonlocal_var
-        nonlocal_var = 30
+    # Arithmetic operators
+    a, b = 10, 3
+    addition = a + b
+    subtraction = a - b
+    multiplication = a * b
+    division = a / b
+    floor_div = a // b
+    modulo = a % b
+    exponent = a**b
+
+    # Comparison operators
+    is_greater = a > b
+    is_less = a < b
+    is_equal = a == b
+    is_not_equal = a != b
+    is_greater_equal = a >= b
+    is_less_equal = a <= b
+
+    # Logical operators
+    both_true = (a > 5) and (b < 5)
+    either_true = (a > 5) or (b > 5)
+    is_false = not (a < 5)
+
+    # Bitwise operators
+    bitwise_and = a & b
+    bitwise_or = a | b
+    bitwise_xor = a ^ b
+    bitwise_not = ~a
+    left_shift = a << 1
+    right_shift = a >> 1
+
+    # Identity operators
+    is_same = a is b
+    is_not_same = a is not b
+
+    # Membership operators
+    is_in_list = a in [1, 5, 10, 15]
+    is_not_in_list = b not in [1, 5, 10, 15]
 
 
-# Type annotations
-def annotated(x: int, y: str = "default") -> Dict[str, Union[int, str]]:
-    return {"x": x, "y": y}
+# ============================================================================
+# STRING OPERATIONS
+# ============================================================================
 
 
-# Assertions
-assert x is not None, "x cannot be None"
+def string_operations() -> None:
+    """Demonstrate string handling."""
 
-# Delete
-del x
+    # String literals
+    single_quote = "single quoted string"
+    double_quote = "double quoted string"
+    triple_quoted = """This is a
+    multi-line
+    string"""
+    raw_string = r"C:\Users\name\Documents\file.txt"
 
-# Import statements
-from module import func, Class as Alias
-from . import relative_module
-from ..parent import something
+    # String formatting
+    name = "Alice"
+    age = 30
+    formatted_old = "Name: %s, Age: %d" % (name, age)
+    formatted_new = "Name: {}, Age: {}".format(name, age)
+    formatted_f = f"Name: {name}, Age: {age}"
+    formatted_expr = f"Age next year: {age + 1}"
+
+    # String methods
+    text = "Hello World"
+    uppercase = text.upper()
+    lowercase = text.lower()
+    title_case = text.title()
+    start_check = text.startswith("Hello")
+    end_check = text.endswith("World")
+    find_index = text.find("World")
+    replaced = text.replace("World", "Python")
+    split_text = text.split()
+    joined = "-".join(["a", "b", "c"])
+    stripped = "  hello  ".strip()
 
 
-# Yield
-def generator():
-    yield 1
-    yield from another_generator()
+# ============================================================================
+# CONTEXT MANAGERS AND GENERATORS
+# ============================================================================
 
 
-# Ellipsis
-def stub(): ...
+def file_operations() -> None:
+    """Demonstrate context manager usage."""
+
+    # With statement
+    with open("example.txt", "r") as f:
+        content = f.read()
+
+    # Multiple context managers
+    with open("input.txt", "r") as infile, open("output.txt", "w") as outfile:
+        for line in infile:
+            outfile.write(line.upper())
 
 
-# Walrus operator (Python 3.8+)
-if (n := len(my_list)) > 5:
-    print(f"List has {n} items")
+def generator_function() -> Callable:
+    """A generator function that yields values."""
+    for i in range(5):
+        yield i
+
+    yield from range(5, 10)
+
+
+def simple_generator():
+    """Generate first n Fibonacci numbers."""
+    a, b = 0, 1
+    for _ in range(10):
+        yield a
+        a, b = b, a + b
+
+
+# ============================================================================
+# TYPE HINTS AND ANNOTATIONS
+# ============================================================================
+
+
+def complex_function(
+    numbers: List[int],
+    multiplier: int = 2,
+    filter_fn: Optional[Callable[[int], bool]] = None,
+) -> Dict[str, Union[List[int], int]]:
+    """
+    Process a list of numbers with optional filtering.
+
+    Args:
+        numbers: List of integers to process
+        multiplier: Factor to multiply each number by
+        filter_fn: Optional function to filter numbers
+
+    Returns:
+        Dictionary with processed results and count
+    """
+    filtered = [n for n in numbers if filter_fn is None or filter_fn(n)]
+    processed = [n * multiplier for n in filtered]
+    return {"original": numbers, "processed": processed, "count": len(processed)}
+
+
+# ============================================================================
+# MAIN EXECUTION
+# ============================================================================
+
+if __name__ == "__main__":
+    # Execute sample code
+    print("Python sample file loaded successfully!")
+
+    # Walrus operator (Python 3.8+)
+    if (length := len(numbers)) > 5:
+        print(f"List has {length} items")
+
+    # Create instances
+    dog = Dog("Buddy", "Golden Retriever")
+    dog.age = 5
+    print(f"{dog.name} says: {dog.make_sound()}")
+
+    # Use various functions
+    result = simple_function(10, 20)
+    assert result == 30, "Function should return 30"
+
+    # Generator usage
+    for value in generator_function():
+        pass
+
+    # Assertions
+    assert DEBUG_MODE is True
+    assert MAX_RETRIES >= 1
+
+    print("All examples executed!")
