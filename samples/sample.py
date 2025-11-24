@@ -1,17 +1,12 @@
 #!/usr/bin/env python3
-"""
-Comprehensive Python sample showcasing all language features and token types.
+"""Comprehensive Python sample showcasing all language features and token types.
+
 Demonstrates proper syntax highlighting across the Centurion color theme.
 """
 
-# Standard library imports
-import os
-import sys
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from enum import Enum
-from datetime import datetime
-from pathlib import Path
 from collections.abc import Callable
 
 
@@ -105,24 +100,24 @@ def decorated_function() -> str:
 # ============================================================================
 
 # Lambda expressions
-add = lambda x, y: x + y
-multiply = lambda x, y: x * y
-is_even = lambda n: n % 2 == 0
+add: Callable[[int, int], int] = lambda x, y: x + y
+multiply: Callable[[int, int], int] = lambda x, y: x * y
+is_even: Callable[[int], bool] = lambda n: n % 2 == 0
 
 # List comprehension
-squares = [x**2 for x in range(10)]
-evens = [x for x in range(20) if is_even(x)]
-nested = [[x + y for y in range(3)] for x in range(3)]
+_squares = [x**2 for x in range(10)]
+_evens = [x for x in range(20) if is_even(x)]
+_nested = [[x + y for y in range(3)] for x in range(3)]
 
 # Dictionary comprehension
-squares_dict = {x: x**2 for x in range(5)}
-filtered_dict = {k: v for k, v in {"a": 1, "b": 2, "c": 3}.items() if v > 1}
+_squares_dict = {x: x**2 for x in range(5)}
+_filtered_dict = {k: v for k, v in {"a": 1, "b": 2, "c": 3}.items() if v > 1}
 
 # Set comprehension
-unique_squares = {x**2 for x in range(10)}
+_unique_squares = {x**2 for x in range(10)}
 
 # Generator expression
-squared_generator = (x**2 for x in range(1000))
+_squared_generator = (x**2 for x in range(1000))
 
 
 # ============================================================================
@@ -150,11 +145,11 @@ tags: set = {"python", "theme", "syntax", "highlight"}
 unique_ids = {101, 102, 103, 104}
 
 # Slicing operations
-first_three = numbers[:3]
-skip_first = numbers[1:]
-every_second = numbers[::2]
-reversed_list = numbers[::-1]
-subset = numbers[2:7:2]
+_first_three = numbers[:3]
+_skip_first = numbers[1:]
+_every_second = numbers[::2]
+_reversed_list = numbers[::-1]
+_subset = numbers[2:7:2]
 
 
 # ============================================================================
@@ -208,7 +203,7 @@ def exception_handling() -> None:
     """Demonstrate exception handling."""
 
     try:
-        result = 10 / 0
+        _result = 10 / 0  # noqa: F841
     except ZeroDivisionError as e:
         print(f"Error: {e}")
     except (ValueError, TypeError):
@@ -291,42 +286,42 @@ def operators_example() -> None:
 
     # Arithmetic operators
     a, b = 10, 3
-    addition = a + b
-    subtraction = a - b
-    multiplication = a * b
-    division = a / b
-    floor_div = a // b
-    modulo = a % b
-    exponent = a**b
+    _addition = a + b
+    _subtraction = a - b
+    _multiplication = a * b
+    _division = a / b
+    _floor_div = a // b
+    _modulo = a % b
+    _exponent = a**b
 
     # Comparison operators
-    is_greater = a > b
-    is_less = a < b
-    is_equal = a == b
-    is_not_equal = a != b
-    is_greater_equal = a >= b
-    is_less_equal = a <= b
+    _is_greater = a > b
+    _is_less = a < b
+    _is_equal = a == b
+    _is_not_equal = a != b
+    _is_greater_equal = a >= b
+    _is_less_equal = a <= b
 
     # Logical operators
-    both_true = (a > 5) and (b < 5)
-    either_true = (a > 5) or (b > 5)
-    is_false = not (a < 5)
+    _both_true = (a > 5) and (b < 5)
+    _either_true = (a > 5) or (b > 5)
+    _is_false = not (a < 5)
 
     # Bitwise operators
-    bitwise_and = a & b
-    bitwise_or = a | b
-    bitwise_xor = a ^ b
-    bitwise_not = ~a
-    left_shift = a << 1
-    right_shift = a >> 1
+    _bitwise_and = a & b
+    _bitwise_or = a | b
+    _bitwise_xor = a ^ b
+    _bitwise_not = ~a
+    _left_shift = a << 1
+    _right_shift = a >> 1
 
     # Identity operators
-    is_same = a is b
-    is_not_same = a is not b
+    _is_same = a is b
+    _is_not_same = a is not b
 
     # Membership operators
-    is_in_list = a in [1, 5, 10, 15]
-    is_not_in_list = b not in [1, 5, 10, 15]
+    _is_in_list = a in [1, 5, 10, 15]
+    _is_not_in_list = b not in [1, 5, 10, 15]
 
 
 # ============================================================================
@@ -338,33 +333,33 @@ def string_operations() -> None:
     """Demonstrate string handling."""
 
     # String literals
-    single_quote = "single quoted string"
-    double_quote = "double quoted string"
-    triple_quoted = """This is a
+    _single_quote = "single quoted string"
+    _double_quote = "double quoted string"
+    _triple_quoted = """This is a
     multi-line
     string"""
-    raw_string = r"C:\Users\name\Documents\file.txt"
+    _raw_string = r"C:\Users\name\Documents\file.txt"
 
     # String formatting
     name = "Alice"
     age = 30
-    formatted_old = "Name: %s, Age: %d" % (name, age)
-    formatted_new = "Name: {}, Age: {}".format(name, age)
-    formatted_f = f"Name: {name}, Age: {age}"
-    formatted_expr = f"Age next year: {age + 1}"
+    _formatted_old = "Name: %s, Age: %d" % (name, age)
+    _formatted_new = "Name: {}, Age: {}".format(name, age)
+    _formatted_f = f"Name: {name}, Age: {age}"
+    _formatted_expr = f"Age next year: {age + 1}"
 
     # String methods
     text = "Hello World"
-    uppercase = text.upper()
-    lowercase = text.lower()
-    title_case = text.title()
-    start_check = text.startswith("Hello")
-    end_check = text.endswith("World")
-    find_index = text.find("World")
-    replaced = text.replace("World", "Python")
-    split_text = text.split()
-    joined = "-".join(["a", "b", "c"])
-    stripped = "  hello  ".strip()
+    _uppercase = text.upper()
+    _lowercase = text.lower()
+    _title_case = text.title()
+    _start_check = text.startswith("Hello")
+    _end_check = text.endswith("World")
+    _find_index = text.find("World")
+    _replaced = text.replace("World", "Python")
+    _split_text = text.split()
+    _joined = "-".join(["a", "b", "c"])
+    _stripped = "  hello  ".strip()
 
 
 # ============================================================================
@@ -376,11 +371,11 @@ def file_operations() -> None:
     """Demonstrate context manager usage."""
 
     # With statement
-    with open("example.txt", "r") as f:
-        content = f.read()
+    with open("example.txt") as f:
+        _content = f.read()
 
     # Multiple context managers
-    with open("input.txt", "r") as infile, open("output.txt", "w") as outfile:
+    with open("input.txt") as infile, open("output.txt", "w") as outfile:
         for line in infile:
             outfile.write(line.upper())
 
