@@ -1,18 +1,6 @@
 {
   "name": "Centurion",
   "type": "dark",
-  // "semanticHighlighting": true,
-  // "semanticTokenColors": {
-  //   "enumMember": {
-  //     "foreground": "#56c8d6"
-  //   },
-  //   "variable.constant": {
-  //     "foreground": "#ff9d72"
-  //   },
-  //   "variable.defaultLibrary": {
-  //     "foreground": "#f2cb82"
-  //   }
-  // },
   "tokenColors": [
     {
       "name": "support.function.std.rust",
