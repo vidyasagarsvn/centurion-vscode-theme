@@ -1,0 +1,64 @@
+{
+  "name": "JSON Sample",
+  "description": "Complete JSON demonstrating all token types",
+  "version": "1.0.0",
+  "author": {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "age": 30
+  },
+  "numbers": {
+    "integer": 42,
+    "negative": -100,
+    "float": 3.14159,
+    "scientific": 1.5e-3,
+    "large": 9007199254740991
+  },
+  "strings": {
+    "simple": "simple string",
+    "escaped": "string with \"quotes\" and \\ backslash",
+    "newline": "line1\nline2",
+    "unicode": "unicode \u0041\u0042\u0043",
+    "tab": "column1\tcolumn2",
+    "special": "\b\f\r"
+  },
+  "booleans": {
+    "true_value": true,
+    "false_value": false
+  },
+  "null_value": null,
+  "arrays": {
+    "strings": ["item1", "item2", "item3"],
+    "numbers": [1, 2, 3, 4, 5],
+    "mixed": [1, "two", true, null, 3.14],
+    "nested": [
+      [1, 2],
+      [3, 4],
+      [5, 6]
+    ],
+    "objects": [
+      { "id": 1, "name": "First" },
+      { "id": 2, "name": "Second" }
+    ]
+  },
+  "nested_objects": {
+    "level1": {
+      "level2": {
+        "level3": {
+          "value": "deeply nested"
+        }
+      }
+    }
+  },
+  "special_keys": {
+    "key with spaces": "value",
+    "key-with-dashes": "value",
+    "key_with_underscores": "value",
+    "key.with.dots": "value",
+    "123numeric": "value"
+  },
+  "empty_collections": {
+    "empty_array": [],
+    "empty_object": {}
+  }
+}

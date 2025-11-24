@@ -594,6 +594,15 @@
       }
     },
     {
+      "name": "Variables - Constants",
+      "scope": [
+        "variable.other.constant"
+      ],
+      "settings": {
+        "foreground": "#fd64ae"
+      }
+    },
+    {
       "name": "illegal",
       "scope": [
         "invalid.illegal"
@@ -642,6 +651,117 @@
       "name": "[VSCODE-CUSTOM] JSON Property Name",
       "scope": [
         "support.type.property-name.json"
+      ],
+      "settings": {
+        "foreground": "#ff8c42"
+      }
+    },
+    {
+      "name": "JSON String",
+      "scope": [
+        "string.quoted.double.json"
+      ],
+      "settings": {
+        "foreground": "#42b8ff"
+      }
+    },
+    {
+      "name": "JSON Property Key",
+      "scope": [
+        "string.quoted.double.json meta.object.member.json"
+      ],
+      "settings": {
+        "foreground": "#ff8c42"
+      }
+    },
+    {
+      "name": "JSON Number",
+      "scope": [
+        "constant.numeric.json"
+      ],
+      "settings": {
+        "foreground": "#8cff42"
+      }
+    },
+    {
+      "name": "JSON Boolean",
+      "scope": [
+        "constant.language.json"
+      ],
+      "settings": {
+        "foreground": "#ff42d4"
+      }
+    },
+    {
+      "name": "JSON Null",
+      "scope": [
+        "constant.language.null.json"
+      ],
+      "settings": {
+        "foreground": "#ff42d4"
+      }
+    },
+    {
+      "name": "JSON Punctuation - Braces",
+      "scope": [
+        "punctuation.definition.dictionary.begin.json",
+        "punctuation.definition.dictionary.end.json"
+      ],
+      "settings": {
+        "foreground": "#e0c084"
+      }
+    },
+    {
+      "name": "JSON Punctuation - Brackets",
+      "scope": [
+        "punctuation.definition.array.begin.json",
+        "punctuation.definition.array.end.json"
+      ],
+      "settings": {
+        "foreground": "#e0c084"
+      }
+    },
+    {
+      "name": "JSON Punctuation - Colon",
+      "scope": [
+        "punctuation.separator.key-value.json"
+      ],
+      "settings": {
+        "foreground": "#e0c084"
+      }
+    },
+    {
+      "name": "JSON Punctuation - Comma",
+      "scope": [
+        "punctuation.separator.array.json",
+        "punctuation.separator.object.json"
+      ],
+      "settings": {
+        "foreground": "#e0c084"
+      }
+    },
+    {
+      "name": "JSON Meta Object Member",
+      "scope": [
+        "meta.object.member.json"
+      ],
+      "settings": {
+        "foreground": "#f6f6f6"
+      }
+    },
+    {
+      "name": "JSON Meta Array",
+      "scope": [
+        "meta.array.json"
+      ],
+      "settings": {
+        "foreground": "#f6f6f6"
+      }
+    },
+    {
+      "name": "JSON Meta Object",
+      "scope": [
+        "meta.object.json"
       ],
       "settings": {
         "foreground": "#f6f6f6"
@@ -868,6 +988,32 @@
       ],
       "settings": {
         "foreground": "#f4d395"
+      }
+    },
+    {
+      "name": "Go package name",
+      "scope": [
+        "variable.other.property"
+      ],
+      "settings": {
+        "foreground": "#48fdfa"
+      }
+    },
+    {
+      "name": "Go Data Types",
+      "scope": [
+        "storage.type.numeric.go",
+        "storage.type.boolean.go",
+        "storage.type.string.go",
+        "storage.type.byte.go",
+        "storage.type.rune.go",
+        "storage.type.uintptr.go",
+        "storage.type.error.go",
+        "storage.type.any.go",
+        "storage.type.interface.go"
+      ],
+      "settings": {
+        "foreground": "#079eda"
       }
     },
     {
@@ -1451,11 +1597,47 @@
     {
       "name": "Keyword control (fallback)",
       "scope": [
-        "keyword.control",
-        "keyword"
+        "keyword.control"
       ],
       "settings": {
         "foreground": "#89DDFF"
+      }
+    },
+    {
+      "name": "Keyword (fallback)",
+      "scope": [
+        "keyword"
+      ],
+      "settings": {
+        "foreground": "#d946ef"
+      }
+    },
+    {
+      "name": "Keyword (fallback)",
+      "scope": [
+        "keyword.type",
+        "keyword.struct"
+      ],
+      "settings": {
+        "foreground": "#c084fc"
+      }
+    },
+    {
+      "name": "Keyword (fallback)",
+      "scope": [
+        "keyword.function"
+      ],
+      "settings": {
+        "foreground": "#da3bfa"
+      }
+    },
+    {
+      "name": "Keyword (fallback)",
+      "scope": [
+        "keyword.operator"
+      ],
+      "settings": {
+        "foreground": "#0adbf2"
       }
     },
     {
@@ -1483,6 +1665,15 @@
       ],
       "settings": {
         "foreground": "#EEFFFF"
+      }
+    },
+    {
+      "name": "Variables (fallback)",
+      "scope": [
+        "variable.parameter.function"
+      ],
+      "settings": {
+        "foreground": "#6ce6e6"
       }
     },
     {

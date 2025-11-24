@@ -1,0 +1,160 @@
+# YAML Sample
+# Complete YAML demonstrating all token types and syntax
+
+# Comments
+# Single line comment
+
+# Strings
+string_literal: "double quoted string"
+string_unquoted: unquoted string value
+string_single: 'single quoted string'
+string_escaped: "line1\nline2\ttabbed"
+
+# Multi-line strings
+literal_block: |
+  This is a literal block
+  It preserves newlines
+  And indentation
+  
+folded_block: >
+  This is a folded block
+  It folds long lines
+  into a single line
+  unless blank line
+
+# Numbers
+integer: 42
+negative: -100
+float: 3.14159
+scientific: 1.5e-3
+octal: 0o755
+hex: 0xFF
+infinity: .inf
+neg_infinity: -.inf
+not_a_number: .nan
+
+# Booleans
+bool_true: true
+bool_false: false
+bool_yes: yes
+bool_no: no
+bool_on: on
+bool_off: off
+
+# Null
+null_value: null
+empty_value:
+null_tilde: ~
+
+# Arrays (sequences)
+simple_array:
+  - item1
+  - item2
+  - item3
+
+nested_array:
+  - [1, 2, 3]
+  - [4, 5, 6]
+  - - 7
+    - 8
+    - 9
+
+mixed_array:
+  - string
+  - 42
+  - true
+  - null
+  - key: value
+
+# Objects (mappings)
+simple_object:
+  key1: value1
+  key2: value2
+  key3: value3
+
+nested_object:
+  level1:
+    level2:
+      level3: deeply_nested_value
+
+mixed_object:
+  string: value
+  number: 42
+  boolean: true
+  null_key: null
+  array: [1, 2, 3]
+  object:
+    nested: value
+
+# Inline arrays
+inline_array: [1, 2, 3, 4, 5]
+inline_mixed: [string, 42, true, null]
+
+# Inline objects
+inline_object: { key1: value1, key2: value2, key3: value3 }
+
+# Complex structures
+person:
+  name: John Doe
+  age: 30
+  email: john@example.com
+  address:
+    street: 123 Main St
+    city: New York
+    state: NY
+    zip: 10001
+  hobbies:
+    - reading
+    - gaming
+    - cooking
+  skills:
+    - name: Python
+      level: expert
+    - name: JavaScript
+      level: advanced
+    - name: Java
+      level: intermediate
+
+# Anchors and aliases
+default_config: &default
+  timeout: 30
+  retries: 3
+  log_level: info
+
+config_prod: &prod
+  <<: *default
+  timeout: 60
+  environment: production
+
+config_dev:
+  <<: *default
+  environment: development
+
+# Tags
+explicit_string: !!str 42
+explicit_int: !!int "42"
+explicit_float: !!float "3.14"
+explicit_bool: !!bool "yes"
+explicit_null: !!null
+
+# Special values
+timestamp: 2024-01-15T10:30:00Z
+date: 2024-01-15
+
+# Empty collections
+empty_array: []
+empty_object: {}
+
+# Directives (at top of file typically)
+# %YAML 1.2
+# %TAG ! tag:example.com,2014:
+
+# Document markers
+# --- starts new document
+# ... ends document
+
+# Comments with special syntax
+# TODO: Implement feature
+# FIXME: Fix the bug
+# NOTE: Important information
+# HACK: Quick workaround
