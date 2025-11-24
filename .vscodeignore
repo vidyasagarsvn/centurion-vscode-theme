@@ -1,5 +1,52 @@
+# Basic ignores
 .git/
 .gitignore
-.vscodeignore
-README.md
-LICENSE
+
+# Keep README and LICENSE in the package (negated later if needed)
+!README.md
+!LICENSE
+
+# Exclude editor / env / build artifacts
+.vscode/
+node_modules/
+dist/
+out/
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Exclude scripts, samples, and reports — these should not be in the .vsix
+scripts/
+scripts/**
+samples/
+samples/**
+scripts/*.json
+scripts/*.md
+scripts/*.js
+scripts/package.json
+scripts/coverage_report.json
+scripts/scopes_report.json
+scripts/suggested_token_fallbacks.md
+
+# Exclude backups and temp files
+*.bak
+**/*.bak
+*~
+*.tmp
+
+# Exclude CI and github metadata
+.github/
+/.github/**
+
+# Exclude any tests or docs not required for the theme
+tests/
+test/
+docs/
+examples/
+
+# Ensure themes folder is included
+!themes/**
+
+# Always include package.json (required by vsce)
+!package.json
