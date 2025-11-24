@@ -15,6 +15,26 @@ This directory contains showcase scripts in various programming languages to dem
 
 **Best for**: Creating screenshots showing Python code
 
+### `showcase.js`
+**JavaScript** - Pure JavaScript with ES6+ patterns
+- Classes and object-oriented design
+- Arrow functions and modern syntax
+- JSDoc comments and documentation
+- Map and Set collections
+- Higher-order functions and filters
+
+**Best for**: Web development and Node.js workflows
+
+### `showcase.rb`
+**Ruby** - Idiomatic Ruby patterns
+- Classes and modules
+- Blocks, procs, and lambdas
+- String interpolation and formatting
+- YARD documentation syntax
+- Filter and sort operations
+
+**Best for**: Ruby on Rails and backend development
+
 ### `showcase.ts`
 **TypeScript** - Object-oriented TypeScript patterns
 - Interfaces and type definitions
