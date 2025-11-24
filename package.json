@@ -31,10 +31,10 @@
     "rust",
     "go"
   ],
-  "galleryImages": [
-    "images/screenshot-1.png",
-    "images/screenshot-2.png"
-  ],
+  "galleryBanner": {
+    "color": "#1a2225",
+    "theme": "dark"
+  },
   "contributes": {
     "themes": [
       {
