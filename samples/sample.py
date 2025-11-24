@@ -7,12 +7,12 @@ Demonstrates proper syntax highlighting across the Centurion color theme.
 # Standard library imports
 import os
 import sys
-from typing import List, Dict, Optional, Union, Tuple, Any, Callable
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from enum import Enum
 from datetime import datetime
 from pathlib import Path
+from collections.abc import Callable
 
 
 # ============================================================================
@@ -23,7 +23,7 @@ DEBUG_MODE: bool = True
 MAX_RETRIES: int = 3
 API_TIMEOUT: float = 30.5
 EMPTY_VALUE: None = None
-VALID_STATUSES: List[str] = ["pending", "active", "completed"]
+VALID_STATUSES: list[str] = ["pending", "active", "completed"]
 
 
 # ============================================================================
@@ -72,8 +72,8 @@ def simple_function(x: int, y: int) -> int:
 
 
 def function_with_defaults(
-    name: str, age: int = 25, email: Optional[str] = None, *args: Any, **kwargs: Any
-) -> Dict[str, Any]:
+    name: str, age: int = 25, email: str | None = None, *args, **kwargs
+) -> dict[str, object]:
     """Function with default and variable arguments."""
     return {
         "name": name,
@@ -87,7 +87,7 @@ def function_with_defaults(
 def decorator_function(func: Callable) -> Callable:
     """A simple decorator."""
 
-    def wrapper(*args: Any, **kwargs: Any) -> Any:
+    def wrapper(*args, **kwargs):
         print(f"Calling {func.__name__}")
         return func(*args, **kwargs)
 
@@ -130,15 +130,15 @@ squared_generator = (x**2 for x in range(1000))
 # ============================================================================
 
 # Lists
-numbers: List[int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-mixed_list: List[Any] = [1, "string", 3.14, True, None]
+numbers: list[int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+mixed_list: list = [1, "string", 3.14, True, None]
 
 # Tuples
-coordinates: Tuple[int, int, int] = (10, 20, 30)
-immutable_data: Tuple[str, ...] = ("a", "b", "c", "d")
+coordinates: tuple[int, int, int] = (10, 20, 30)
+immutable_data: tuple[str, ...] = ("a", "b", "c", "d")
 
 # Dictionaries
-config: Dict[str, Any] = {
+config: dict[str, object] = {
     "host": "localhost",
     "port": 8080,
     "debug": True,
@@ -259,7 +259,7 @@ class Animal(ABC):
         return "Generic Animal"
 
     @classmethod
-    def from_dict(cls, data: Dict[str, Any]) -> "Animal":
+    def from_dict(cls, data: dict[str, object]) -> "Animal":
         """Create an animal from a dictionary."""
         return cls(data.get("name", "Unknown"))
 
@@ -407,10 +407,10 @@ def simple_generator():
 
 
 def complex_function(
-    numbers: List[int],
+    numbers: list[int],
     multiplier: int = 2,
-    filter_fn: Optional[Callable[[int], bool]] = None,
-) -> Dict[str, Union[List[int], int]]:
+    filter_fn: Callable[[int], bool] | None = None,
+) -> dict[str, list[int] | int]:
     """
     Process a list of numbers with optional filtering.
 
