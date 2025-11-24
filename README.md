@@ -19,10 +19,10 @@ code --install-extension centurion-vscode-theme-<version>.vsix
 ### Screenshots
 
 ![Theme Preview 1](images/screenshot-1.png)  
-*Centurion theme in action with JavaScript code*
+*Centurion theme in action with Python code*
 
 ![Theme Preview 2](images/screenshot-2.png)  
-*TypeScript and Python syntax highlighting*
+*TypeScript syntax highlighting*
 
 ## ✨ Features
 
